@@ -1,7 +1,10 @@
 import React, { InputHTMLAttributes } from 'react';
+import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { SubmitHandler } from '@unform/core';
 import { Form } from '@unform/web';
+
+import { ApplicationState } from '../../store';
 
 import Input from '../../components/Input';
 import AuthLayout from '../../layouts/auth';
@@ -12,6 +15,8 @@ interface FormData extends InputHTMLAttributes<HTMLInputElement> {
 };
 
 const Login: React.FC = () => {
+  const auth = useSelector((state: ApplicationState) => state.auth.signed);
+
   const handleSubmit: SubmitHandler<FormData> = (data) => {
     console.log(data);
   };
