@@ -23,7 +23,7 @@ export const Background = styled.div`
 export const Content = styled.div`
   width: 40%;
   height: 100%;
-  background: #695eb8;
+  background: linear-gradient(-90deg, #695eb8, #6930c3);
   display: flex;
   align-items: center;
   justify-content: center;
