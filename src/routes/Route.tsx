@@ -3,6 +3,8 @@ import {
   Route, Redirect, RouteProps, useLocation,
 } from 'react-router-dom';
 
+import store from '../store';
+
 interface Props extends RouteProps {
   isPrivate?: boolean;
   component: React.ComponentType;
@@ -14,7 +16,7 @@ const RouteWrapper: React.FC<Props> = ({
   ...rest
 }) => {
   const location = useLocation();
-  const signed = false;
+  const { signed } = store.getState().auth;
 
   return (
     <Route

@@ -1,5 +1,8 @@
+/* eslint-disable no-param-reassign */
 import { Reducer } from 'redux';
-import { AuthState } from './types';
+import produce from 'immer';
+
+import { AuthState, AuthTypes } from './types';
 
 const INITIAL_STATE: AuthState = {
   token: '',
@@ -7,11 +10,15 @@ const INITIAL_STATE: AuthState = {
   loading: false,
 };
 
-const reducer: Reducer<AuthState> = (state = INITIAL_STATE, action) => {
+const reducer: Reducer<AuthState> = (state = INITIAL_STATE, action) => produce(state, (draft) => {
   switch (action.type) {
+    case AuthTypes.SIGN_IN_SUCCESS: {
+      draft.token = action.payload.token;
+      draft.signed = true;
+      break;
+    }
     default:
-      return state;
   }
-};
+});
 
 export default reducer;
