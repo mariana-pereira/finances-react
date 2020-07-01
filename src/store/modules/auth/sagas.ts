@@ -1,6 +1,7 @@
 import {
   all, call, put, takeLatest,
 } from 'redux-saga/effects';
+import { toast } from 'react-toastify';
 
 import api from '../../../services/api';
 import history from '../../../services/history';
@@ -19,6 +20,7 @@ export function* signIn(action: SignInRequestAction) {
     yield put(signInSuccess(token));
     history.push('/');
   } catch (error) {
+    toast.error('Falha na autenticação, verifique seus dados.');
     yield put(signFailure());
   }
 }
