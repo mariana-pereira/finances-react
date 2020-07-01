@@ -1,10 +1,11 @@
 import React, { InputHTMLAttributes } from 'react';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { SubmitHandler } from '@unform/core';
 import { Form } from '@unform/web';
 
 import { signInRequest } from '../../store/modules/auth/actions';
+import { ApplicationState } from '../../store';
 
 import Input from '../../components/Input';
 import AuthLayout from '../../layouts/auth';
@@ -16,6 +17,7 @@ interface FormData extends InputHTMLAttributes<HTMLInputElement> {
 
 const Login: React.FC = () => {
   const dispatch = useDispatch();
+  const loading = useSelector((state: ApplicationState) => state.auth.loading);
 
   const handleSubmit: SubmitHandler<FormData> = (data) => {
     dispatch(signInRequest(data));
@@ -30,7 +32,7 @@ const Login: React.FC = () => {
           type="password"
           placeholder="Digite sua senha"
         />
-        <button type="submit">Entrar</button>
+        <button type="submit">{loading ? 'Carregando' : 'Entrar'}</button>
         <Link to="/register">Criar conta gratuita</Link>
       </Form>
     </AuthLayout>
