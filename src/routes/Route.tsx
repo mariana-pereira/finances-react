@@ -3,7 +3,7 @@ import {
   Route, Redirect, RouteProps, useLocation,
 } from 'react-router-dom';
 
-import store from '../store';
+import { store } from '../store';
 
 interface Props extends RouteProps {
   isPrivate?: boolean;

@@ -1,5 +1,3 @@
-import { User } from '../user/types';
-
 export enum AuthTypes {
   SIGN_IN_REQUEST = '@auth/SIGN_IN_REQUEST',
   SIGN_IN_SUCCESS = '@auth/SIGN_IN_SUCCESS',
@@ -15,7 +13,6 @@ export interface SignInSuccessAction {
   type: typeof AuthTypes.SIGN_IN_SUCCESS;
   payload: {
     token: string;
-    user: User;
   }
 }
 
