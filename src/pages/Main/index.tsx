@@ -1,7 +1,5 @@
 import React from 'react';
 
-import Header from '../../components/Header';
-
 import investmentIcon from '../../assets/icons/piggy.svg';
 import accountIcon from '../../assets/icons/money.svg';
 import invoiceIcon from '../../assets/icons/invoice.svg';
@@ -10,7 +8,6 @@ import { Container, CardContainer, Card } from './styles';
 
 const Main: React.FC = () => (
   <Container>
-    <Header />
     <CardContainer>
       <Card>
         <img src={accountIcon} alt="account" />
