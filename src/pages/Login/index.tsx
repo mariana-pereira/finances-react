@@ -3,12 +3,15 @@ import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { SubmitHandler } from '@unform/core';
 import { Form } from '@unform/web';
+import { toast } from 'react-toastify';
 
 import { signInRequest } from '../../store/modules/auth/actions';
 import { ApplicationState } from '../../store';
 
 import Input from '../../components/Input';
 import AuthLayout from '../../layouts/auth';
+
+import schema from './schema';
 
 interface FormData extends InputHTMLAttributes<HTMLInputElement> {
   email: string;
@@ -19,8 +22,14 @@ const Login: React.FC = () => {
   const dispatch = useDispatch();
   const loading = useSelector((state: ApplicationState) => state.auth.loading);
 
-  const handleSubmit: SubmitHandler<FormData> = (data) => {
-    dispatch(signInRequest(data));
+  const handleSubmit: SubmitHandler<FormData> = async (data) => {
+    try {
+      await schema.validate(data);
+
+      dispatch(signInRequest(data));
+    } catch (error) {
+      toast.error(error.message);
+    }
   };
 
   return (
