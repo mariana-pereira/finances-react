@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-  background-color: rgba(0, 0, 0, 0.15);
+  background-color: ${(props) => props.theme.colors.gray};
   width: 260px;
   height: 100%;
 `;
@@ -12,7 +12,8 @@ export const Header = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  border-bottom: 2px solid #fff;
+  border-bottom: 2px solid;
+  border-color: ${(props) => props.theme.colors.background};
 
   img {
     width: 100px;
@@ -21,13 +22,13 @@ export const Header = styled.div`
   }
 
   h1 {
-    color: #444;
+    color: ${(props) => props.theme.colors.text};
     margin: 10px 0;
   }
 
   span {
     margin-top: 10px;
-    color: #444;
+    color: ${(props) => props.theme.colors.text};
   }
 `;
 
@@ -39,7 +40,8 @@ export const SideItem = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-around;
-  border-bottom: 2px solid #fff;
+  border-bottom: 2px solid;
+  border-color: ${(props) => props.theme.colors.background};
 
   img {
     width: 32px;
@@ -48,6 +50,6 @@ export const SideItem = styled.div`
   span {
     margin-right: 50px;
     font-size: 16px;
-    color: #444;
+    color: ${(props) => props.theme.colors.text};
   }
 `;

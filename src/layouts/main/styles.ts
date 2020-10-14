@@ -4,6 +4,7 @@ export const Container = styled.div`
   height: 100%;
   width: 100%;
   position: fixed;
+  background-color: ${(props) => props.theme.colors.background};
 `;
 
 export const Content = styled.div`

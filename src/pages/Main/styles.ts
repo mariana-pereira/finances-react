@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-  height: 100%;
+  height: 100vh;
 `;
 
 export const CardContainer = styled.div`
@@ -14,7 +14,7 @@ export const CardContainer = styled.div`
 export const Card = styled.div`
   width: 200px;
   height: 200px;
-  background-color: rgba(0, 0, 0, 0.15);
+  background-color: ${(props) => props.theme.colors.gray};
   border-radius: 6px;
 
   display: flex;
@@ -28,10 +28,10 @@ export const Card = styled.div`
   }
 
   h1 {
-    color: #444;
+    color: ${(props) => props.theme.colors.text};
   }
 
   span {
-    color: #555;
+    color: ${(props) => props.theme.colors.text};
   }
 `;
