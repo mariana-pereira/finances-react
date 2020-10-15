@@ -6,6 +6,7 @@ import { persistReducer, persistStore } from 'redux-persist';
 import storage from 'redux-persist/lib/storage';
 
 import { AuthState } from './modules/auth/types';
+import { ThemeState } from './modules/theme/types';
 
 import rootReducer from './modules/rootReducer';
 import rootSaga from './modules/rootSaga';
@@ -18,6 +19,7 @@ const persistConfig = {
 
 export interface ApplicationState {
   auth: AuthState;
+  theme: ThemeState;
 }
 
 const persistedReducer = persistReducer(persistConfig, rootReducer);
