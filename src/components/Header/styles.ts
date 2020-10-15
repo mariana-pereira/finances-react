@@ -5,7 +5,8 @@ export const Container = styled.div`
   height: 60px;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
+  padding: 0 20px;
 
   h1 {
     color: ${(props) => props.theme.colors.text}
