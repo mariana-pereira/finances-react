@@ -14,7 +14,7 @@ import rootSaga from './modules/rootSaga';
 const persistConfig = {
   key: 'finances-app',
   storage,
-  whitelist: ['auth'],
+  whitelist: ['auth', 'theme'],
 };
 
 export interface ApplicationState {

@@ -9,6 +9,6 @@ export const Container = styled.div`
   padding: 0 20px;
 
   h1 {
-    color: ${(props) => props.theme.colors.text}
+    color: #fff;
   }
 `;

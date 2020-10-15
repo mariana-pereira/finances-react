@@ -11,7 +11,7 @@ const INITIAL_STATE: ThemeState = {
 const reducer: Reducer<ThemeState> = (state = INITIAL_STATE, action) => produce(state, (draft) => {
   switch (action.type) {
     case ThemeTypes.APPLY_THEME: {
-      draft.theme = action.payload.theme;
+      draft.theme = action.payload;
       break;
     }
     default:
