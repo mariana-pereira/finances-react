@@ -6,13 +6,15 @@ import Route from './Route';
 import Login from '../pages/Login';
 import Register from '../pages/Register';
 import Main from '../pages/Main';
+import Accounts from '../pages/Accounts';
 
 const Routes: React.FC = () => (
   <Switch>
-    <Route path="/login" component={Login} />
-    <Route path="/register" component={Register} />
+    {/* <Route path="/login" component={Login} />
+    <Route path="/register" component={Register} /> */}
 
-    <Route path="/" exact component={Main} isPrivate />
+    <Route path="/" exact component={Main} />
+    <Route path="/accounts" exact component={Accounts} />
   </Switch>
 );
 
