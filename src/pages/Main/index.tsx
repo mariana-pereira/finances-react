@@ -8,7 +8,8 @@ import investmentIcon from '../../assets/icons/piggy.svg';
 import accountIcon from '../../assets/icons/money.svg';
 import invoiceIcon from '../../assets/icons/invoice.svg';
 
-import { Container, Card } from './styles';
+import { Container } from './styles';
+import Card from '../../components/Card';
 
 const Main: React.FC = () => (
   <Layout>
