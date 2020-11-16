@@ -8,7 +8,9 @@ import investmentIcon from '../../assets/icons/piggy.svg';
 import accountIcon from '../../assets/icons/money.svg';
 import invoiceIcon from '../../assets/icons/invoice.svg';
 
-import { Container } from './styles';
+import {
+  Container, Icon, Amount, Title,
+} from './styles';
 import Card from '../../components/Card';
 
 const Main: React.FC = () => (
@@ -16,19 +18,19 @@ const Main: React.FC = () => (
     <Container>
       <CardContainer>
         <Card>
-          <img src={accountIcon} alt="account" />
-          <h1>R$ 200</h1>
-          <span>Saldo em conta</span>
+          <Icon src={accountIcon} alt="account" />
+          <Amount>R$ 200</Amount>
+          <Title>Saldo em conta</Title>
         </Card>
         <Card>
-          <img src={investmentIcon} alt="investments" />
-          <h1>R$ 200</h1>
-          <span>Saldo investido</span>
+          <Icon src={investmentIcon} alt="investments" />
+          <Amount>R$ 200</Amount>
+          <Title>Saldo investido</Title>
         </Card>
         <Card>
-          <img src={invoiceIcon} alt="invoice" />
-          <h1>R$ 200</h1>
-          <span>Total de faturas</span>
+          <Icon src={invoiceIcon} alt="invoice" />
+          <Amount>R$ 200</Amount>
+          <Title>Total de faturas</Title>
         </Card>
       </CardContainer>
     </Container>
