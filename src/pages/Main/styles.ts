@@ -4,13 +4,6 @@ export const Container = styled.div`
   height: 100vh;
 `;
 
-export const CardContainer = styled.div`
-  padding: 0 50px;
-  margin-top: 20px;
-  display: flex;
-  justify-content: space-between;
-`;
-
 export const Card = styled.div`
   width: 200px;
   height: 200px;
