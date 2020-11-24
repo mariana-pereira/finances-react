@@ -1,6 +1,7 @@
 import React from 'react';
 import Card from '../../components/Card';
 import CardContainer from '../../components/CardContainer';
+import Summary from '../../components/Summary';
 
 import Layout from '../../layouts/main';
 
@@ -11,6 +12,7 @@ import {
 const Accounts: React.FC = () => (
   <Layout>
     <Container>
+      <Summary />
       <CardContainer>
         <Card width="250px" height="250px">
           <Account>Nubank</Account>
