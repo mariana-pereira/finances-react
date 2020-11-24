@@ -1,18 +1,61 @@
 import React from 'react';
+import Card from '../../components/Card';
+import CardContainer from '../../components/CardContainer';
 
 import Layout from '../../layouts/main';
 
-import { Container, CardContainer, Card } from './styles';
+import {
+  Container, Account, Title, Amount, RevenueContainer, Revenue,
+} from './styles';
 
 const Accounts: React.FC = () => (
   <Layout>
     <Container>
-      <h1>Accounts</h1>
       <CardContainer>
         <Card>
-          <h4>Nubank</h4>
-          <strong>Balance</strong>
-          <span>R$ 100,00</span>
+          <Account>Nubank</Account>
+          <Title>Saldo</Title>
+          <Amount>R$ 500,00</Amount>
+          <RevenueContainer>
+            <Revenue>
+              <Amount>entrada</Amount>
+              <p>+ R$48,00</p>
+            </Revenue>
+            <Revenue>
+              <Amount>saída</Amount>
+              <p>- R$5,00</p>
+            </Revenue>
+          </RevenueContainer>
+        </Card>
+        <Card>
+          <Account>Nubank</Account>
+          <Title>Saldo</Title>
+          <Amount>R$ 500,00</Amount>
+          <RevenueContainer>
+            <Revenue>
+              <Amount>entrada</Amount>
+              <p>+ R$48,00</p>
+            </Revenue>
+            <Revenue>
+              <Amount>saída</Amount>
+              <p>- R$5,00</p>
+            </Revenue>
+          </RevenueContainer>
+        </Card>
+        <Card>
+          <Account>Nubank</Account>
+          <Title>Saldo</Title>
+          <Amount>R$ 500,00</Amount>
+          <RevenueContainer>
+            <Revenue>
+              <Amount>entrada</Amount>
+              <p>+ R$48,00</p>
+            </Revenue>
+            <Revenue>
+              <Amount>saída</Amount>
+              <p>- R$5,00</p>
+            </Revenue>
+          </RevenueContainer>
         </Card>
       </CardContainer>
     </Container>
