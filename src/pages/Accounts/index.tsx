@@ -12,7 +12,7 @@ const Accounts: React.FC = () => (
   <Layout>
     <Container>
       <CardContainer>
-        <Card>
+        <Card width="250px" height="250px">
           <Account>Nubank</Account>
           <Title>Saldo</Title>
           <Amount>R$ 500,00</Amount>
@@ -27,7 +27,7 @@ const Accounts: React.FC = () => (
             </Revenue>
           </RevenueContainer>
         </Card>
-        <Card>
+        <Card width="250px" height="250px">
           <Account>Nubank</Account>
           <Title>Saldo</Title>
           <Amount>R$ 500,00</Amount>
@@ -42,7 +42,7 @@ const Accounts: React.FC = () => (
             </Revenue>
           </RevenueContainer>
         </Card>
-        <Card>
+        <Card width="250px" height="250px">
           <Account>Nubank</Account>
           <Title>Saldo</Title>
           <Amount>R$ 500,00</Amount>

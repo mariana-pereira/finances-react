@@ -17,17 +17,17 @@ const Main: React.FC = () => (
   <Layout>
     <Container>
       <CardContainer>
-        <Card>
+        <Card width="200px" height="200px">
           <Icon src={accountIcon} alt="account" />
           <Amount>R$ 200</Amount>
           <Title>Saldo em conta</Title>
         </Card>
-        <Card>
+        <Card width="200px" height="200px">
           <Icon src={investmentIcon} alt="investments" />
           <Amount>R$ 200</Amount>
           <Title>Saldo investido</Title>
         </Card>
-        <Card>
+        <Card width="200px" height="200px">
           <Icon src={invoiceIcon} alt="invoice" />
           <Amount>R$ 200</Amount>
           <Title>Total de faturas</Title>
