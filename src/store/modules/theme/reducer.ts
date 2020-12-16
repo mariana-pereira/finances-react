@@ -4,7 +4,7 @@ import produce from 'immer';
 import { ThemeState, ThemeTypes } from './types';
 import light from '../../../styles/themes/light';
 
-const INITIAL_STATE: ThemeState = {
+export const INITIAL_STATE: ThemeState = {
   theme: light,
 };
 
