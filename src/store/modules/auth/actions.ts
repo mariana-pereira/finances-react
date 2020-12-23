@@ -11,4 +11,6 @@ export const sigUpRequest = (credentials: Credentials) =>
 export const signInSuccess = (token: string) =>
   action(AuthTypes.SIGN_IN_SUCCESS, token);
 
+export const signUpSuccess = () => action(AuthTypes.SIGN_IN_FAILURE);
+
 export const signFailure = () => action(AuthTypes.SIGN_IN_FAILURE);

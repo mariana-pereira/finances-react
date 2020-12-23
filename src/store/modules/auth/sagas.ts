@@ -7,7 +7,7 @@ import api from '../../../services/api';
 import history from '../../../services/history';
 
 import { SignInRequestAction, SignUpRequestAction, AuthTypes } from './types';
-import { signInSuccess, signFailure } from './actions';
+import { signInSuccess, signFailure, signUpSuccess } from './actions';
 
 export function* signIn(action: SignInRequestAction) {
   try {
@@ -36,6 +36,7 @@ export function* SignUp(action: SignUpRequestAction) {
     });
 
     history.push('/login');
+    yield put(signUpSuccess());
   } catch (error) {
     toast.error('Falha no cadastro, verifique seus dados.');
     yield put(signFailure());

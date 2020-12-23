@@ -4,7 +4,7 @@ import produce from 'immer';
 
 import { AuthState, AuthTypes } from './types';
 
-const INITIAL_STATE: AuthState = {
+export const INITIAL_STATE: AuthState = {
   token: '',
   signed: false,
   loading: false,
