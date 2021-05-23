@@ -1,26 +1,31 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { useSelector } from 'react-redux';
+import { PersistGate } from 'redux-persist/integration/react';
+import { Router } from 'react-router-dom';
+import { ToastContainer } from 'react-toastify';
+import { ThemeProvider } from 'styled-components';
 
-function App() {
+import Routes from './routes';
+import history from './services/history';
+
+import { ApplicationState, persistor } from './store';
+
+import GlobalStyle from './styles/global';
+
+const App: React.FC = () => {
+  const theme = useSelector((state: ApplicationState) => state.theme.theme);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ThemeProvider theme={theme}>
+      <PersistGate persistor={persistor}>
+        <Router history={history}>
+          <Routes />
+          <GlobalStyle />
+          <ToastContainer autoClose={3000} />
+        </Router>
+      </PersistGate>
+    </ThemeProvider>
   );
-}
+};
 
 export default App;
